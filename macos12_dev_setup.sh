@@ -6,6 +6,9 @@ echo \\nInstalling Homebrew…\\n
 echo \\nInstalliing vim…\\n;
 brew install vim;
 
+echo \\nInstalling tmux\\n;
+brew install tmux;
+
 echo \\nInstalling curl…\\n;
 brew install curl;
 
