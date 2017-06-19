@@ -19,6 +19,14 @@ brew install python3;
 echo \\nInstalling pip (requires sudo)...\\n;
 sudo easy_install pip;
 
+echo \\nInstalling and linking dotfiles\\n;
+cd ~;
+git clone https://github.com/smhaggerty/.dotfiles.git;
+rm .vimrc;
+ln -s .dotfiles/.vimrc .vimrc;
+rm -rf .vim;
+ln -s .dotfiles/.vim .vim;
+
 echo \\nInstalling Atom…\\n;
 wget https://github.com/atom/atom/releases/download/v1.18.0/atom-mac.zip;
 unzip atom-mac.zip;
