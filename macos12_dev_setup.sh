@@ -22,6 +22,9 @@ brew install python3;
 echo \\nInstalling pip (requires sudo)...\\n;
 sudo easy_install pip;
 
+echo \\nInstalling GHC…\\n;
+brew install ghc;
+
 echo \\nInstalling and linking dotfiles\\n;
 cd ~;
 git clone https://github.com/smhaggerty/.dotfiles.git;
