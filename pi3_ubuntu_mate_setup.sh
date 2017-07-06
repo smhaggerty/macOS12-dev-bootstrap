@@ -43,7 +43,7 @@ ln -s .dotfiles/.vimrc .vimrc;
 rm -rf .vim;
 ln -s .dotfiles/.vim .vim;
 
-echo \\nSetting up ssh...\\n;
+echo \\nAdding .ssh directory...\\n;
 install -d -m 700 ~/.ssh;
 
 echo \\nCleaning up...\\n;
