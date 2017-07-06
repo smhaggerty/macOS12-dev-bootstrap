@@ -1,25 +1,25 @@
 #! /bin/sh
 
-echo \\napt update and upgrade ...\\n;
+echo \\napt update and upgrade...\\n;
 sudo apt -y update;
 sudo apt -y upgrade;
 
-echo \\nInstalling vim ...\\n;
+echo \\nInstalling vim...\\n;
 sudo apt -y install vim;
 
-echo \\nInstalling git ...\\n;
+echo \\nInstalling git...\\n;
 sudo apt -y install git;
 
-echo \\nInstalling curl ...\\n;
+echo \\nInstalling curl...\\n;
 sudo apt -y install curl;
 
-echo \\nInstalling tmux ...\\n;
+echo \\nInstalling tmux...\\n;
 sudo apt -y install tmux;
 
-echo \\nInstalling haskell ...\\n;
+echo \\nInstalling haskell...\\n;
 sudo apt -y install haskell-platform;
 
-echo \\nInstalling fail2ban ...\\n;
+echo \\nInstalling fail2ban...\\n;
 sudo apt -y install fail2ban;
 sudo touch /etc/fail2ban/jail.local;
 sudo tee -a /etc/fail2ban/jail.local << 'EOF'
@@ -35,7 +35,7 @@ findtime = 604800
 maxretry = 3
 EOF
 
-echo \\nInstalling and linking dotfiles\\n;
+echo \\nInstalling and linking dotfiles...\\n;
 cd ~;
 git clone https://github.com/smhaggerty/.dotfiles.git;
 rm .vimrc;
@@ -43,5 +43,8 @@ ln -s .dotfiles/.vimrc .vimrc;
 rm -rf .vim;
 ln -s .dotfiles/.vim .vim;
 
-echo \\nCleaning up ...\\n;
+echo \\nSetting up ssh...\\n;
+install -d -m 700 ~/.ssh;
+
+echo \\nCleaning up...\\n;
 sudo apt -y autoremove;
