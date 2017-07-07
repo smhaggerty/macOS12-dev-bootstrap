@@ -25,6 +25,9 @@ sudo easy_install pip;
 echo \\nInstalling GHC…\\n;
 brew install ghc;
 
+echo \\nInstalling node...\\n;
+brew install node;
+
 echo \\nInstalling and linking dotfiles\\n;
 cd ~;
 git clone https://github.com/smhaggerty/.dotfiles.git;
