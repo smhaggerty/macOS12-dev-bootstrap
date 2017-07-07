@@ -42,6 +42,10 @@ rm .vimrc;
 ln -s .dotfiles/.vimrc .vimrc;
 rm -rf .vim;
 ln -s .dotfiles/.vim .vim;
+rm .bash;
+rm .bashrc;
+echo "alias temp='cat /sys/class/thermal/thermal_zone0/temp'" >> .bash;
+echo "alias temp='cat /sys/class/thermal/thermal_zone0/temp'" >> .bashrc;
 
 echo \\nAdding .ssh directory...\\n;
 install -d -m 700 ~/.ssh;
