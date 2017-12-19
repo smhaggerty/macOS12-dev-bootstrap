@@ -1,7 +1,7 @@
 #! /bin/bash
 
 cd ~;
-mdkir temp;
+mkdir temp;
 cd temp;
 sudo apt update;
 sudo apt -y upgrade;
@@ -20,6 +20,7 @@ source ~/.profile;
 
 npm install http-server -g;
 sudo apt install -y python3;
+sudo apt install -y golang-go;
 
 # Install RVM
 sudo apt-get install software-properties-common;
@@ -29,5 +30,6 @@ sudo apt-get install -y rvm;
 
 cd ~;
 rm -rf temp;
-echo "run command 'usermod -aG rvm shane' as root, then check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
+echo "";
+echo "Run command 'usermod -aG rvm <user>' as root, then check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
 
