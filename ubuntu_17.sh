@@ -30,6 +30,7 @@ sudo apt-get install -y rvm;
 
 cd ~;
 rm -rf temp;
+sudo apt purge -y ubuntu-web-launchers;
 echo "";
 echo "Run command 'usermod -aG rvm <user>' as root, then check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
 
