@@ -23,6 +23,7 @@ source ~/.profile;
 
 npm install http-server -g;
 sudo apt install -y python3;
+sudo apt install -y python3-pip;
 sudo apt install -y golang-go;
 
 # Install RVM
@@ -32,6 +33,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 cd ~;
 rm -rf temp;
 sudo apt purge -y ubuntu-web-launchers;
+sudo apt -y autoremove; 
 echo "";
 echo "Check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
 
