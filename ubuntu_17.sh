@@ -32,7 +32,6 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 cd ~;
 rm -rf temp;
 sudo apt purge -y ubuntu-web-launchers;
-sudo su -c usermod -aG rvm shane
 echo "";
-echo "Run command 'usermod -aG rvm <user>' as root, then check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
+echo "Check 'run command as login shell' in gnome-terminal profile preferences to finish rvm setup"
 
